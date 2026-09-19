@@ -74,7 +74,27 @@ data.departmentsNeedingHelp.forEach(department => {
 
 });
   })
+const capacityList =
 
+  document.getElementById("capacityDepartments");
+
+
+capacityList.innerHTML = "";
+
+
+data.departmentsWithCapacity.forEach(department => {
+
+
+  const item = document.createElement("li");
+
+
+  item.innerText = department.message;
+
+
+  capacityList.appendChild(item);
+
+
+});
   .catch(error => {
 
     document.getElementById("status").innerText =
