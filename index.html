@@ -95,6 +95,28 @@ data.departmentsWithCapacity.forEach(department => {
 
 
 });
+	  const suggestionsList =
+
+  document.getElementById("staffingSuggestions");
+
+
+suggestionsList.innerHTML = "";
+
+
+data.staffingSuggestions.forEach(suggestion => {
+
+
+  const item = document.createElement("li");
+
+
+  item.innerText = suggestion.message;
+
+
+  suggestionsList.appendChild(item);
+
+
+});
+ 
 	  })
   .catch(error => {
 
