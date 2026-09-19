@@ -97,7 +97,33 @@ data.departmentsWithCapacity.forEach(department => {
 	  const suggestionsList =
 
   document.getElementById("staffingSuggestions");
+const summaryList =
 
+  document.getElementById("summaryList");
+
+
+summaryList.innerHTML = "";
+
+
+summaryList.innerHTML =
+
+  "<li>Barn til stede: " +
+
+  data.summary.childrenPresent +
+
+  "</li>" +
+
+  "<li>Ansatte til stede: " +
+
+  data.summary.staffPresent +
+
+  "</li>" +
+
+  "<li>Tilgjengelige ansatte: " +
+
+  data.summary.availableStaff +
+
+  "</li>";
 
 suggestionsList.innerHTML = "";
 
