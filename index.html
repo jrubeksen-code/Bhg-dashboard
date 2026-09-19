@@ -35,9 +35,25 @@
 	<script>
 
 
-document.getElementById("status").innerText =
+fetch("https://bhgdashboardfunc01-ekgffwfhbpeqdzek.norwayeast-01.azurewebsites.net/api/status-today")
 
-  "Kontakt med Azure fungerer ✅";
+  .then(response => response.json())
+
+  .then(data => {
+
+    document.getElementById("status").innerText =
+
+      "Barn til stede: " + data.summary.childrenPresent;
+
+  })
+
+  .catch(error => {
+
+    document.getElementById("status").innerText =
+
+      "Feil ved kontakt med Azure";
+
+  });
 
 
 </script>
