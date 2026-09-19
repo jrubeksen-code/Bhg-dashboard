@@ -41,10 +41,15 @@ fetch("https://bhgdashboardfunc01-ekgffwfhbpeqdzek.norwayeast-01.azurewebsites.n
 
   .then(data => {
 
-    document.getElementById("status").innerText =
+document.getElementById("status").innerText =
 
-      "Barn til stede: " + data.summary.childrenPresent;
+  "Barn: " +
 
+  data.summary.childrenPresent +
+
+  " | Ansatte: " +
+
+  data.summary.staffPresent;
   })
 
   .catch(error => {
