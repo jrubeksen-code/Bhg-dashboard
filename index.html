@@ -51,6 +51,27 @@ document.getElementById("status").innerText =
   " | Ansatte: " +
 
   data.summary.staffPresent;
+	  const criticalList =
+
+  document.getElementById("criticalDepartments");
+
+
+criticalList.innerHTML = "";
+
+
+data.departmentsNeedingHelp.forEach(department => {
+
+
+  const item = document.createElement("li");
+
+
+  item.innerText = department.message;
+
+
+  criticalList.appendChild(item);
+
+
+});
   })
 
   .catch(error => {
