@@ -199,15 +199,18 @@ data.departmentOverview.forEach(department => {
 
   tile.innerHTML = `
 
-    <h3>${department.department}</h3>
+  <h3>${department.department.toUpperCase()}</h3>
 
-    <p>Barn: ${department.childrenPresent}</p>
 
-    <p>Ansatte: ${department.staffPresent}</p>
+  <p><strong>Barn:</strong> ${department.childrenPresent}</p>
 
-    <p>${department.message}</p>
 
-  `;
+  <p><strong>Ansatte:</strong> ${department.staffPresent}</p>
+
+
+  <p><strong>Status:</strong><br>${department.message}</p>
+
+`;
 
 
   departmentGrid.appendChild(tile);
