@@ -150,6 +150,66 @@ document.getElementById("status").innerText =
   " | Ansatte: " +
 
   data.summary.staffPresent;
+	  const departmentContainer =
+
+  document.getElementById("departmentCards");
+
+
+departmentContainer.innerHTML =
+
+  '<div class="department-grid"></div>';
+
+
+const departmentGrid =
+
+  departmentContainer.querySelector(".department-grid");
+
+
+data.departmentOverview.forEach(department => {
+
+
+  let colorClass = "green";
+
+
+  if (department.status === "red") {
+
+    colorClass = "red";
+
+  }
+
+
+  if (department.status === "yellow") {
+
+    colorClass = "yellow";
+
+  }
+
+
+  const tile = document.createElement("div");
+
+
+  tile.className =
+
+    "department-tile " + colorClass;
+
+
+  tile.innerHTML = `
+
+    <h3>${department.department}</h3>
+
+    <p>Barn: ${department.childrenPresent}</p>
+
+    <p>Ansatte: ${department.staffPresent}</p>
+
+    <p>${department.message}</p>
+
+  `;
+
+
+  departmentGrid.appendChild(tile);
+
+
+});
 	  const criticalList =
 
   document.getElementById("criticalDepartments");
