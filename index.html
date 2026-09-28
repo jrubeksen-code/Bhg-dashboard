@@ -232,7 +232,57 @@ fetch("https://bhgdashboardfunc01-ekgffwfhbpeqdzek.norwayeast-01.azurewebsites.n
   .then(response => response.json())
 
   .then(data => {
+const kpiCards =
 
+  document.getElementById("kpiCards");
+
+
+kpiCards.innerHTML = `
+
+
+<div class="kpi-grid">
+
+
+  <div class="kpi-card">
+
+    <div class="kpi-value">${data.summary.childrenPresent}</div>
+
+    <div class="kpi-label">Barn</div>
+
+  </div>
+
+
+  <div class="kpi-card">
+
+    <div class="kpi-value">${data.summary.staffPresent}</div>
+
+    <div class="kpi-label">Ansatte</div>
+
+  </div>
+
+
+  <div class="kpi-card">
+
+    <div class="kpi-value">${data.summary.availableStaff}</div>
+
+    <div class="kpi-label">Ledige</div>
+
+  </div>
+
+
+  <div class="kpi-card">
+
+    <div class="kpi-value">${data.summary.staffStatusOverview.absent}</div>
+
+    <div class="kpi-label">Fravær</div>
+
+  </div>
+
+
+</div>
+
+
+`;
 document.getElementById("status").innerText =
 
   "Barn: " +
