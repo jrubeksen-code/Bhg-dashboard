@@ -358,7 +358,25 @@ tile.style.cursor = "pointer";
   tile.className =
 
     "department-tile " + colorClass;
+tile.addEventListener("click", () => {
 
+
+  alert(
+
+    department.department +
+
+    "\nBarn: " +
+
+    department.childrenPresent +
+
+    "\nAnsatte: " +
+
+    department.staffPresent
+
+  );
+
+
+});
 
   tile.innerHTML = `
 
