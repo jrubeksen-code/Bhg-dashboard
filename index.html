@@ -435,28 +435,46 @@ summaryList.innerHTML =
 suggestionsList.innerHTML = "";
 
 
+if (data.departmentsNeedingHelp.length > 0) {
+
+
+  const problem = document.createElement("p");
+
+
+  problem.innerHTML =
+
+    "<strong>" +
+
+    data.departmentsNeedingHelp[0].message +
+
+    "</strong>";
+
+
+  suggestionsList.appendChild(problem);
+
+
+}
+
+
 data.staffingSuggestions.forEach(suggestion => {
 
 
-  const item = document.createElement("li");
+  const recommendation =
+
+    document.createElement("p");
 
 
-  item.innerText = suggestion.message;
+  recommendation.innerHTML =
+
+    "<strong>Anbefaling:</strong><br>" +
+
+    suggestion.message;
 
 
-  suggestionsList.appendChild(item);
+  suggestionsList.appendChild(recommendation);
 
 
 });
- 
-	  })
-  .catch(error => {
-
-    document.getElementById("status").innerText =
-
-      "Feil ved kontakt med Azure";
-
-  });
 
 
 </script>
