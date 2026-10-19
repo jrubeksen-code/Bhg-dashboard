@@ -447,6 +447,62 @@ tile.style.cursor = "pointer";
 tile.addEventListener("click", () => {
 
 
+  expanded = !expanded;
+
+
+  if (expanded) {
+
+
+    tile.innerHTML = `
+
+      <h3>${department.department.toUpperCase()}</h3>
+
+
+      <p>Barn: ${department.childrenPresent}</p>
+
+
+      <p>Ansatte: ${department.staffPresent}</p>
+
+
+      <p>Status: ${department.message}</p>
+
+
+      <hr>
+
+
+      <p><strong>Detaljer kommer senere</strong></p>
+
+    `;
+
+
+  } else {
+
+
+    tile.innerHTML = `
+
+      <h3>${department.department.toUpperCase()}</h3>
+
+
+      <p>Barn: ${department.childrenPresent}</p>
+
+
+      <p>Ansatte: ${department.staffPresent}</p>
+
+
+      <p>Status: ${department.message}</p>
+
+    `;
+
+
+  }
+
+
+});
+
+ 
+ 
+
+
   alert(
 
     department.department +
