@@ -512,7 +512,11 @@ ${
 
     )?.staff
 
-    .map(person => `<li>${person.name}</li>`)
+   .map(person =>
+
+  `<li>${person.name} (${person.status})</li>`
+
+)
 
     .join("") || "<li>Ingen ansatte registrert</li>"
 
