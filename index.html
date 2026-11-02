@@ -452,14 +452,9 @@ tile.addEventListener("click", () => {
       <hr>
 
 
-  <p><strong>Samarbeidsgruppe:</strong>
+<p><strong>Samarbeidsgruppe:</strong>
 
 ${department.collaborationGroup}</p>
-
-
-<p><strong>Nivå:</strong>
-
-${department.level}</p>
 
 
 <p><strong>Bemanningsbehov:</strong>
@@ -470,6 +465,28 @@ ${department.requiredStaff}</p>
 <p><strong>Mangler:</strong>
 
 ${department.staffMissing}</p>
+
+
+<p><strong>Forslag:</strong></p>
+
+
+<p>
+
+${
+
+  data.staffingSuggestions.find(
+
+    suggestion =>
+
+      suggestion.departmentNeedingHelp === department.department
+
+  )?.message || "Ingen forslag"
+
+}
+
+</p>
+
+``
     `;
 
 
