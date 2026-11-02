@@ -495,7 +495,30 @@ ${
     tile.innerHTML = `
 
       <h3>${department.department.toUpperCase()}</h3>
+<p><strong>Ansatte:</strong></p>
 
+
+<ul>
+
+${
+
+  data.departmentStaff
+
+    .find(
+
+      staffGroup =>
+
+        staffGroup.department === department.department
+
+    )?.staff
+
+    .map(person => `<li>${person.name}</li>`)
+
+    .join("") || "<li>Ingen ansatte registrert</li>"
+
+}
+
+</ul>
 
       <p>Barn: ${department.childrenPresent}</p>
 
