@@ -43,6 +43,22 @@ button {
 }
  
 </style>
+ .employee-card {
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  cursor: pointer;
+}
+ 
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+ 
+.status {
+  margin-top: 8px;
+}
  
 </head>
  
@@ -51,7 +67,6 @@ button {
 <div class="card">
  
 <h1>📝 Registrering</h1>
- 
 <div class="employee-card"
      onclick="toggleAttendance(this)"
      style="background-color:#d4edda;">
@@ -61,53 +76,22 @@ button {
  
 </div>
  
-
+<div class="employee-card"
+     onclick="toggleAttendance(this)">
  
-</div>
- 
-<div class="employee-card">
     <div class="name">Ida</div>
     <div class="status">❌ Ikke på jobb</div>
+ 
 </div>
  
-<div class="employee-card">
+<div class="employee-card"
+     onclick="toggleAttendance(this)">
+ 
     <div class="name">Kari</div>
     <div class="status">❌ Ikke på jobb</div>
-</div>
- 
- 
  
 </div>
-  <script>
-function toggleAttendance(card) {
  
-    const status = card.querySelector(".status");
- 
-    if (status.innerText === "❌ Ikke på jobb") {
- 
-        status.innerText = "✅ På jobb";
-        card.style.backgroundColor = "#d4edda";
- 
-        const now = new Date().toLocaleTimeString('no-NO', {
-            hour: '2-digit',
-            minute: '2-digit'
-        });
- 
-        alert("Logget inn kl. " + now);
- 
-    } else {
- 
-        status.innerText = "❌ Ikke på jobb";
-        card.style.backgroundColor = "#f8d7da";
- 
-        const now = new Date().toLocaleTimeString('no-NO', {
-            hour: '2-digit',
-            minute: '2-digit'
-        });
- 
-        alert("Logget ut kl. " + now);
-    }
-}
 </script>
 </body>
 
