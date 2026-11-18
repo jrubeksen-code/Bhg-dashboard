@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html>
- 
 <head>
- 
 <meta charset="UTF-8">
- 
 <title>Registrering</title>
- 
 <style>
- 
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -17,14 +12,12 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
- 
 .card {
   background: white;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
- 
 input,
 select {
   width: 100%;
@@ -32,7 +25,6 @@ select {
   margin-top: 5px;
   margin-bottom: 15px;
 }
- 
 button {
   background: #0078d4;
   color: white;
@@ -50,67 +42,50 @@ button {
   text-align: center;
   padding: 10px;
 }
- 
 .name {
   font-size: 18px;
   font-weight: bold;
 }
- 
 .status {
    margin-top: 8px;
- }
- .employee-grid {
+}
+.employee-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
+</style>
  
-  </style> 
-
 </head>
- 
 <body>
- 
 <div class="card">
- 
 <h1>📝 Registrering</h1>
-
+ 
 <div class="employee-grid">
- 
-    <div class="employee-card"
+<div class="employee-card"
          onclick="toggleAttendance(this)"
          style="background-color:#d4edda;">
- 
-        <div class="name">Anne</div>
-        <div class="status">✅ På jobb</div>
- 
-    </div>
- 
-    <div class="employee-card"
-         onclick="toggleAttendance(this)"
-         style="background-color:#d4edda;">
- 
-        <div class="name">Ida</div>
-        <div class="status">✅ På jobb</div>
- 
-    </div>
- 
-    <div class="employee-card"
-         onclick="toggleAttendance(this)"
-         style="background-color:#d4edda;">
- 
-        <div class="name">Kari</div>
-        <div class="status">✅ På jobb</div>
- 
-    </div>
- 
+<div class="name">Anne</div>
+<div class="status">✅ På jobb</div>
 </div>
- 
- 
- 
+<div class="employee-card"
+         onclick="toggleAttendance(this)"
+         style="background-color:#d4edda;">
+<div class="name">Ida</div>
+<div class="status">✅ På jobb</div>
+</div>
+<div class="employee-card"
+         onclick="toggleAttendance(this)"
+         style="background-color:#d4edda;">
+<div class="name">Kari</div>
+<div class="status">✅ På jobb</div>
+</div>
+</div>
+
 </script>
 </body>
-
  
-</html>
 
+</html>
+ 
+ 
